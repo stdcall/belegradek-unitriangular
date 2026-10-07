@@ -1,0 +1,679 @@
+{
+  "entries": [
+    {
+      "printed_page": 10,
+      "place": "Introduction",
+      "original": "(cf. 1.10.2 and 1.10.4)",
+      "corrected": "(cf. @prop:nonisomorphic-associated-rings and @prop:asymmetric-triangular-ring)",
+      "reason": "The assertion uses the finite nonisomorphic rings constructed in Proposition 1.10.3 and Proposition 1.10.4.",
+      "verified_by": "verified statement targets",
+      "id": "E001"
+    },
+    {
+      "printed_page": 12,
+      "place": "Introduction",
+      "original": "is a group of exponent $p^(n-1)$",
+      "corrected": "is a group of exponent dividing $p^(n-1)$",
+      "reason": "The exact exponent $p^(ceil(log_p n))$ divides $p^(n-1)$ for $n >= 3$, by the binomial identity for powers of unipotent matrices.",
+      "verified_by": "exact exponent p^ceil(log_p n) divides p^(n−1) for n>=3; follows nilpotent matrix binomial powers",
+      "id": "E002"
+    },
+    {
+      "id": "E003",
+      "printed_page": 12,
+      "place": "Introduction, the question preceding the stable group construction",
+      "original": "This question occured in connection with the",
+      "corrected": "This question occurred in connection with the",
+      "reason": "The printed verb contains a spelling error.",
+      "verified_by": "Printed page 12, independent source comparison"
+    },
+    {
+      "printed_page": 13,
+      "place": "Introduction paragraph At first glance",
+      "original": "the problem studied in Section 4.2",
+      "corrected": "the problem studied in Section @sec:decision-problem-degrees",
+      "reason": "Sacerdote’s decision problem is treated in Section 4.3, rather than Section 4.2.",
+      "verified_by": "Sacerdote decision problem actually treated in section4.3, not4.2",
+      "id": "E004"
+    },
+    {
+      "printed_page": 15,
+      "place": "Section 1.2, normalized coboundaries",
+      "original": "$q(0)=0$; $q(x+y)$",
+      "corrected": "$q(e)=0$; $q(x y)$",
+      "reason": "The group $B$ is written multiplicatively. These substitutions give the normalized cocycle identity for an arbitrary group $B$.",
+      "verified_by": "The group $B$ is written multiplicatively. These substitutions give the normalized cocycle identity for an arbitrary group $B$.",
+      "id": "E005"
+    },
+    {
+      "printed_page": 16,
+      "place": "Section 1.2, the map $theta_g$",
+      "original": "For a symmetric 2-cocycle $g in Z^2(A,B)$",
+      "corrected": "For a 2-cocycle $g in Z^2(A,B)$",
+      "reason": "The map $theta_g$ measures asymmetry; it vanishes on symmetric cocycles. The subsequent homomorphism is defined on all cocycles.",
+      "verified_by": "The map $theta_g$ measures asymmetry; it vanishes on symmetric cocycles. The subsequent homomorphism is defined on all cocycles.",
+      "id": "E006"
+    },
+    {
+      "printed_page": 17,
+      "place": "Proposition 1.3.1, inverse formula",
+      "original": "$a^((-1))=a-gamma e_(1 n)=a-delta e_(1 n)$",
+      "corrected": "$a^((-1))=a^(-1)-gamma e_(1 n)=a^(-1)-delta e_(1 n)$",
+      "reason": "The right-hand side uses the inverse for the ordinary matrix product, as the following calculation shows. The printed formula already fails when every cocycle is zero.",
+      "verified_by": "The right-hand side uses the inverse for the ordinary matrix product, as the following calculation shows. The printed formula already fails when every cocycle is zero.",
+      "id": "E007"
+    },
+    {
+      "printed_page": 20,
+      "place": "Section 1.3, direct sum of cocycles",
+      "original": "$overline(g)(c,c')=sum_(m=1)^(n-1) g_m lr((c_1,c_1'))$",
+      "corrected": "$overline(g)(c,c')=sum_(m=1)^(n-1) g_m lr((c_m,c_m'))$",
+      "reason": "Each summand uses its own component of the direct sum.",
+      "verified_by": "Each summand uses its own component of the direct sum.",
+      "id": "E008"
+    },
+    {
+      "printed_page": 20,
+      "place": "Section 1.3, central factor set",
+      "original": "$f:(R^+)^(n-1) times (R^+)^(n-1) arrow R^+$; $h=lambda compose f^pi$; the extensions use $f^pi$ and $f^pi+overline(g)^pi$.",
+      "corrected": "$f:(U/Z(U)) times (U/Z(U)) arrow R^+$, $f(a Z(U),b Z(U))=sum_(j=2)^(n-1) alpha_(1 j) beta_(j n)$; $h=lambda compose f$. The extensions use $f$ and $f+overline(g)^pi$.",
+      "reason": "The factor set does not generally descend to the first-superdiagonal quotient. In $UT_4(ZZ)$ take $a=t_(1 3)(1)$ and $b=t_(3 4)(1)$: $pi(a Z(U))=0$, but $h(a Z(U),b Z(U))=t_(1 4)(1)$. The quotient factor set construction is described in Weibel, Theorem 6.6.7 and Exercise 6.6.4.",
+      "verified_by": "The factor set does not generally descend to the first-superdiagonal quotient. In $UT_4(ZZ)$ take $a=t_(1 3)(1)$ and $b=t_(3 4)(1)$: $pi(a Z(U))=0$, but $h(a Z(U),b Z(U))=t_(1 4)(1)$. The quotient factor set construction is described in Weibel, Theorem 6.6.7 and Exercise 6.6.4.",
+      "id": "E009"
+    },
+    {
+      "printed_page": 21,
+      "place": "Proposition 1.4.1",
+      "original": "$b in U_k$",
+      "corrected": "$b in U_(k+1)$",
+      "reason": "The factors on the $k$th superdiagonal determine the coset modulo the next term of the lower central series. Allowing $b in U_k$ destroys uniqueness.",
+      "verified_by": "The factors on the $k$th superdiagonal determine the coset modulo the next term of the lower central series. Allowing $b in U_k$ destroys uniqueness.",
+      "id": "E010"
+    },
+    {
+      "printed_page": 23,
+      "place": "Article section on printed page",
+      "original": "$tau_(i k)([x,y]) = tau_(m p)([z,v])$",
+      "corrected": "$tau_(i k)([x,y]) = tau_(m q)([z,v])$",
+      "reason": "The commutator $[U_(m p),U_(p q)]$ belongs to $U_(m q)$, the required domain of the coordinate map.",
+      "verified_by": "commutator [Ump,Upq] lies Umq; property5 domain",
+      "id": "E011"
+    },
+    {
+      "printed_page": 24,
+      "place": "Article section on printed page",
+      "original": "For $x in U_(i j)$ and $y in U_(j k)$ we set",
+      "corrected": "For $x in H_(i j)$ and $y in H_(j k)$ we set",
+      "reason": "The variables belong to the abstract subgroups $H_(i j)$ and $H_(j k)$.",
+      "verified_by": "domain",
+      "id": "E012"
+    },
+    {
+      "printed_page": 25,
+      "place": "Article section on printed page",
+      "original": "$alpha arrow.bar t_(i j) lr((alpha))$",
+      "corrected": "$alpha arrow.bar t_(1 n) lr((alpha))$",
+      "reason": "The map takes values in the center $H_(1 n)$.",
+      "verified_by": "domain: center H1n",
+      "id": "E013"
+    },
+    {
+      "printed_page": 26,
+      "place": "Article section on printed page",
+      "original": "$rho_(i j)(alpha_(i j)) in U_(1 n)$",
+      "corrected": "$rho_(i j)(alpha_(i j)) in H_(1 n)$",
+      "reason": "The proof concerns the abstract group $H$.",
+      "verified_by": "abstract H proof domain",
+      "id": "E014"
+    },
+    {
+      "printed_page": 26,
+      "place": "Article section on printed page",
+      "original": "$u=t_(i,i+1)(alpha) ⊞ t_(1 n)(beta)$",
+      "corrected": "$u=t_(i,i+1)(alpha) ⊙ t_(1 n)(beta)$",
+      "reason": "Here the operation is the group product. The ring addition $⊞$ is defined only on the center.",
+      "verified_by": "boxplus is only ring addition in H1n, here group product",
+      "id": "E015"
+    },
+    {
+      "printed_page": 27,
+      "place": "Article section on printed page",
+      "original": "$A_(i+1)^i$",
+      "corrected": "$A_i^(i+1)$",
+      "reason": "The definition requires the lower index to be smaller than the upper index; the next page uses $zeta_i^(i+1)$.",
+      "verified_by": "definition k<m and next page coordinate zeta_i^(i+1)",
+      "id": "E016"
+    },
+    {
+      "printed_page": 29,
+      "place": "Article section on printed page",
+      "original": "$and.big_(i<j) forall u (phi_(1 n)(u,overline(x)) and [x_(i j),u]=e arrow u=e)$",
+      "corrected": "Delete this final conjunct.",
+      "reason": "The preceding four conjuncts express condition (3). This extra conjunct fails in $UT_3(ZZ)$ for the nonidentity central element $u=t_(1 3)(1)$.",
+      "verified_by": "first four exactly property3; UT3(Z), central u=t13(1) contradicts deleted clause",
+      "id": "E017"
+    },
+    {
+      "printed_page": 30,
+      "place": "Article section on printed page",
+      "original": "$[[u,v] w]$",
+      "corrected": "$[[u,v],w]$",
+      "reason": "The nested commutator requires two comma-separated arguments.",
+      "verified_by": "nested commutator syntax",
+      "id": "E018"
+    },
+    {
+      "printed_page": 32,
+      "place": "Section 1.8, multiplication graph $rho(u,v,w)$",
+      "original": "$[x_(1 2),z]=u$",
+      "corrected": "$[x_(1 2),z]=v$",
+      "reason": "The second commutator supplies the second argument of multiplication. The first argument is supplied by the preceding condition.",
+      "verified_by": "The second commutator supplies the second argument of multiplication. The first argument is supplied by the preceding condition.",
+      "id": "E019"
+    },
+    {
+      "printed_page": 34,
+      "place": "Article section on printed page",
+      "original": "$I=K$ for $n,beta != 0$; $I=mat(FF_p,F;0,0)$ for $n != 0$ and $beta=0$; $I=mat(0,F;0,0)$ for $n=beta=0$ and $alpha != 0$; $I=F mat(0,mu;0,1)$ for $n=0$ and $beta != 0$, where $mu=beta^(-1) alpha$.",
+      "corrected": "In each case $I$ contains the displayed principal right ideal, and therefore $abs(I) >= abs(F)$.",
+      "reason": "A chosen nonzero element generates a principal right ideal contained in $I$, but that ideal need not equal $I$. For example, take $I=K$ and choose the matrix $e_(1 2)$.",
+      "verified_by": "I=K with chosen e12 disproves equality; product formula yields containment",
+      "id": "E020"
+    },
+    {
+      "printed_page": 37,
+      "place": "Article section on printed page",
+      "original": "$(phi_1 phi_1', phi_2 phi_2')$",
+      "corrected": "$(phi_1 + phi_1', phi_2 + phi_2')$",
+      "reason": "Bilinearity establishes sums of the coordinate maps. The subsequent noncommuting example disproves closure under their products.",
+      "verified_by": "bilinearity establishes sums; subsequent noncommuting example disproves products",
+      "id": "E021"
+    },
+    {
+      "printed_page": 41,
+      "place": "Numbered passage on the printed page",
+      "original": "Since $Phi_2$ is a permutation of $A$",
+      "corrected": "Since $Phi_2$ is a permutation of $A^2$",
+      "reason": "The map acts on pairs of elements of $A$.",
+      "verified_by": "Acts onA².",
+      "id": "E022"
+    },
+    {
+      "printed_page": 41,
+      "place": "Numbered passage on the printed page",
+      "original": "$chi_2(rho,lambda)=theta_1(lambda,rho) star eta_2$",
+      "corrected": "$chi_2(rho,lambda)=theta_2(lambda,rho) star eta_2$",
+      "reason": "This is the identity for the second coordinate.",
+      "verified_by": "Second coordinate identity.",
+      "id": "E023"
+    },
+    {
+      "printed_page": 42,
+      "place": "Numbered passage on the printed page",
+      "original": "(5) for $x in H_12$, $y in U_23$, $z in U_12$, and $v in U_23$",
+      "corrected": "(5) for $x in H_12$, $y in H_23$, $z in H_12$, and $v in H_23$",
+      "reason": "The conditions concern the abstract group $H$ and its subgroups; $U$ is undefined here.",
+      "verified_by": "Conditions are expressed for the abstract group H and its subgroups; U is undefined here.",
+      "id": "E024"
+    },
+    {
+      "printed_page": 47,
+      "place": "Numbered passage on the printed page",
+      "original": "$=theta[f_1,dots,f_(n-1)](t_(i,i+1)(alpha)) ⊙ theta[f_1,dots,f_(n-1)](t_(i,i+1)(beta))$",
+      "corrected": "$=theta[f_1,dots,f_(n-1)](t_(i,i+1)(alpha)) ⊙' theta[f_1,dots,f_(n-1)](t_(i,i+1)(beta))$",
+      "reason": "The product of the images is taken in the target group, whose operation is primed.",
+      "verified_by": "Homomorphism lands in target group whose multiplication was defined as primed.",
+      "id": "E025"
+    },
+    {
+      "printed_page": 48,
+      "place": "Numbered passage on the printed page",
+      "original": "$f_i lr((alpha))+f_i lr((beta))+g_i lr((alpha,beta))\n  =f_i lr((alpha+beta))+g_i' lr((alpha,beta))$",
+      "corrected": "$f_i lr((alpha))+f_i lr((beta))+g_i' lr((alpha,beta))\n  =f_i lr((alpha+beta))+g_i lr((alpha,beta))$",
+      "reason": "Applying $theta$ to the source product gives $f_i(alpha+beta)+g_i(alpha,beta)$. Multiplying the images gives $f_i(alpha)+f_i(beta)+g_i'(alpha,beta)$. Thus $g_i-g_i'=f_i^star$.",
+      "verified_by": "Applying theta to source product gives f(alpha+beta)+gi; product of images gives f(alpha)+f(beta)+gi-prime. Thus gi-gi-prime=f*.",
+      "id": "E026"
+    },
+    {
+      "printed_page": 53,
+      "place": "Numbered passage on the printed page",
+      "original": "$f_2(x_1)$",
+      "corrected": "$f_2(x_2)$",
+      "reason": "The second map is evaluated on the second product coordinate in Proposition 1.21.5.",
+      "verified_by": "Prop1.21.5 product coordinate.",
+      "id": "E027"
+    },
+    {
+      "printed_page": 53,
+      "place": "Numbered passage on the printed page",
+      "original": "The rings $ZZ$, $ZZ[x]$ and any $QQ$-algebra are 2-binomial.",
+      "corrected": "The ring $ZZ$ and any $QQ$-algebra are 2-binomial.",
+      "reason": "The following sentence gives the counterexample $x(x-1)/2 ∉ ZZ[x]$.",
+      "verified_by": "Following sentence supplies explicit counterexample x(x-1)/2 not in Z[x].",
+      "id": "E028"
+    },
+    {
+      "printed_page": 54,
+      "place": "Numbered passage on the printed page",
+      "original": "the characteristic of $R$ is odd",
+      "corrected": "$op(\"char\")(R) != 2$",
+      "reason": "Proposition 1.21.10 includes characteristic zero.",
+      "verified_by": "Prop1.21.10 includes characteristic zero.",
+      "id": "E029"
+    },
+    {
+      "printed_page": 58,
+      "place": "Numbered passage on the printed page",
+      "original": "By [45, § 52], $R^+$ is a $2$-divisible group.",
+      "corrected": "By @bib:fuchs1970, § 52, $Ext(R^+,R^+)$ is a $2$-divisible group.",
+      "reason": "For $2$-torsion-free $A$, the exact sequence $0 arrow A arrow^(2) A arrow A/2A arrow 0$ and $Ext_ZZ^2=0$ imply that multiplication by $2$ on $Ext(A,A)$ is surjective. This is the cocycle divisibility used next.",
+      "verified_by": "For A 2-torsion-free, exact sequence 0→A --2→ A→A/2A→0 and Ext²_Z=0 imply multiplication by2 on Ext(A,A) surjective. This is exactly the cocycle divisibility used next.",
+      "id": "E030"
+    },
+    {
+      "printed_page": 58,
+      "place": "Numbered passage on the printed page",
+      "original": "In particular,\n  $ abs(Ext(R^+, R^+)) >= abs(product_(i in I) C_i)=2^(abs(I))>abs(I). $",
+      "corrected": "If $I$ is infinite, then\n  $ abs(Ext(R^+, R^+)) >= abs(product_(i in I) C_i)=2^(abs(I))>abs(I). $",
+      "reason": "For infinite $I$, a product of nontrivial finite cyclic groups has cardinality $2^(abs(I))$. For finite $I$ that equality need not hold; the contradiction is needed only when $I$ is infinite.",
+      "verified_by": "Infinite product of nontrivial finite cyclic groups has cardinal2^|I|. Finite product need not have that cardinal; contradiction is only needed when I infinite.",
+      "id": "E031"
+    },
+    {
+      "printed_page": 58,
+      "place": "Numbered passage on the printed page",
+      "original": "In particular, $abs(R) >= abs(Ext(R^+, R^+))>abs(I)$.\n  Therefore, $I$ is finite; otherwise,",
+      "corrected": "If $I$ were infinite, we would have\n  $abs(R) >= abs(Ext(R^+, R^+))>abs(I)$, whereas\n",
+      "reason": "The strict cardinal inequality is used only under the assumption that $I$ is infinite.",
+      "verified_by": "Makes conditional cardinal inequality apply only to infinite I.",
+      "id": "E032"
+    },
+    {
+      "printed_page": 58,
+      "place": "Numbered passage on the printed page",
+      "original": "$abs(R)=abs(⊕_(i in I) C_i)=abs(I)$.\n  Hence $R$ is finite",
+      "corrected": "$abs(R)=abs(⊕_(i in I) C_i)=abs(I)$.\n  Therefore, $I$ is finite. Hence $R$ is finite",
+      "reason": "This completes the contradiction for infinite $I$ and preserves the conclusion that $R$ is finite.",
+      "verified_by": "Completes contradiction and preserves finite proof.",
+      "id": "E033"
+    },
+    {
+      "printed_page": 61,
+      "place": "Numbered passage on the printed page",
+      "original": "associates an element $alpha$ of $R$ with the matrix\n$t_(1 n) lr((alpha))$.",
+      "corrected": "associates the matrix $t_(1 n) lr((alpha))$ with the element\n$alpha$ of $R$.",
+      "reason": "The coordinate map in definition (c) is a surjection from the interpretation domain, the center, to the interpreted ring.",
+      "verified_by": "Definition(c) makes coordinate map a surjection from interpretation domain (center) to interpreted ring.",
+      "id": "E034"
+    },
+    {
+      "printed_page": 62,
+      "place": "Numbered passage on the printed page",
+      "original": "a cyclic group of order $p^(k-m)$ for $k<m$.",
+      "corrected": "a cyclic group of order $p^(m-k)$ for $k<m$.",
+      "reason": "The subgroup $C[p^k]$ has order $p^k$, so its quotient in a group of order $p^m$ has order $p^(m-k)$.",
+      "verified_by": "C[p^k] has orderp^k, so quotient of orderp^m has orderp^(m-k).",
+      "id": "E035"
+    },
+    {
+      "printed_page": 63,
+      "place": "Numbered passage on the printed page",
+      "original": "Proof of Proposition 1.23.3 (continued).",
+      "corrected": "Proof of Proposition~@prop:homotopic-composition (continued).",
+      "reason": "This proof concerns the homotopy obstruction and continues Proposition 1.23.4, rather than Proposition 1.23.3.",
+      "verified_by": "Proof concerns homotopy obstruction and continues1.23.4, not mutual interpretability1.23.3.",
+      "id": "E036"
+    },
+    {
+      "printed_page": 63,
+      "place": "Numbered passage on the printed page",
+      "original": "Since $q(a) in Z(U)$, we",
+      "corrected": "Since $q(a) in Z(U)^(n(n-1)/2)$, we",
+      "reason": "The matrix-coordinate interpretation $Gamma$ has dimension $n(n-1)/2$, while the domain of $Delta$ is the center. The automorphism acts trivially on each central coordinate and therefore on the tuple.",
+      "verified_by": "Gamma is n(n-1)/2-dimensional matrix-coordinate interpretation; Delta-domain is center. phi acts trivially on every coordinate, hence on tuple.",
+      "id": "E037"
+    },
+    {
+      "printed_page": 64,
+      "place": "Numbered passage on the printed page",
+      "original": "In other words, $Ring(H, frak(h))$ is an",
+      "corrected": "In other words, $Ring(U, frak(h))$ is an",
+      "reason": "The auxiliary lemma assumes a basis in $U$ and has just established the identity in $Ring(U,frak(h))$; $H$ is undefined here.",
+      "verified_by": "Auxiliary Lemma2 assumes basis in U and just proved identity in Ring(U,h); H undefined.",
+      "id": "E038"
+    },
+    {
+      "printed_page": 69,
+      "place": "Numbered passage on the printed page",
+      "original": "for $Th(UT_n^ast)$ from 2.2.2",
+      "corrected": "for $Th(UT_n^ast)$ from @prop:expanded-unitriangular-theory",
+      "reason": "The axiom system appears in Proposition 2.2.1; Proposition 2.2.2 states nonaxiomatizability of the class.",
+      "verified_by": "Axiom system appears in2.2.1;2.2.2 says class not axiomatizable.",
+      "id": "E039"
+    },
+    {
+      "printed_page": 69,
+      "place": "Numbered passage on the printed page",
+      "original": "equivalent to a $UT_n$-group. Let $H$ be a locally pure\n  $UT_n$-group.",
+      "corrected": "equivalent to a $UT_n$-group. Let $H$ be a locally pure\n  quasi-$UT_n$-group.",
+      "reason": "The proof starts with a locally pure quasi-unitriangular group and establishes elementary equivalence to a unitriangular group.",
+      "verified_by": "Proof must begin with model of locally pure quasi class, then prove elementary equivalence to genuine UT_n.",
+      "id": "E040"
+    },
+    {
+      "printed_page": 71,
+      "place": "Numbered passage on the printed page",
+      "original": "By 2.2.1, $G$ can be represented as",
+      "corrected": "By @prop:locally-pure-group-theory, $G$ can be represented as",
+      "reason": "Proposition 2.2.5 characterizes unexpanded models as locally pure quasi-unitriangular groups. Proposition 2.2.1 concerns expanded groups.",
+      "verified_by": "G is unexpanded model;2.2.5 characterizes such models as locally pure quasi groups, hence representable.2.2.1 concerns expanded groups.",
+      "id": "E041"
+    },
+    {
+      "printed_page": 73,
+      "place": "Numbered passage on the printed page",
+      "original": "$n>0$ there is an $m$ such that $k$ divides $m$ for any $k$ with",
+      "corrected": "$n>0$ there is an $m>0$ such that $k$ divides $m$ for any $k$ with",
+      "reason": "The positive witness $n!$ establishes the stronger first-order statement and excludes the zero witness.",
+      "verified_by": "Positive n! establishes stronger first-order statement excluding zero witness.",
+      "id": "E042"
+    },
+    {
+      "printed_page": 73,
+      "place": "Numbered passage on the printed page",
+      "original": "$a>1,2,dots$. Since $S equiv ZZ$, there exists $b in S$ such that",
+      "corrected": "$a>1,2,dots$. Since $S equiv ZZ$, there exists $b>0$ in $S$ such that",
+      "reason": "The transferred statement supplies a positive element divisible by every standard positive integer. Its unique roots generate a copy of $QQ$.",
+      "verified_by": "Transferred stronger statement gives nonzero element divisible by all standard positive integers; torsion-free unique roots generate copyQ.",
+      "id": "E043"
+    },
+    {
+      "printed_page": 75,
+      "place": "Numbered passage on the printed page",
+      "original": "Assume that $frak(h)$ is not an $n$-pure basis.",
+      "corrected": "Assume that $frak(h)$ is an $n$-pure basis.",
+      "reason": "The contradiction in Proposition 2.3.5 starts from the assumption of purity.",
+      "verified_by": "Prop2.3.5 contradiction requires assumed purity; printed text confirms printed not.",
+      "id": "E044"
+    },
+    {
+      "printed_page": 78,
+      "place": "proof wording",
+      "original": "$a_k$ occurs in one of them",
+      "corrected": "$a_k$ occurs in each of them",
+      "reason": "Relations (2)–(6) preserve the unique factor $a_k$ or annihilate the monomial. The induction constructs terms with that same factor; the empty sum represents zero.",
+      "verified_by": "Relations(2)–(6) preserve the unique a_k factor or annihilate the monomial; induction constructs terms containing that same factor. Each also permits the empty sum for the zero monomial.",
+      "id": "E045"
+    },
+    {
+      "printed_page": 79,
+      "place": "Section3 proof",
+      "original": "$X_0 = 1$",
+      "corrected": "$X_0 = {1}$",
+      "reason": "$X_0$ is a set, so singleton braces are required.",
+      "verified_by": "X_0 is a set; singleton braces are required.",
+      "id": "E046"
+    },
+    {
+      "printed_page": 80,
+      "place": "Section3 proof",
+      "original": "$X_0 = 1$",
+      "corrected": "$X_0 = {1}$",
+      "reason": "$X_0$ is a set, so singleton braces are required.",
+      "verified_by": "X_0 is a set; singleton braces are required.",
+      "id": "E047"
+    },
+    {
+      "printed_page": 82,
+      "place": "Proof on the printed page",
+      "original": "cardinality of any left ideal",
+      "corrected": "cardinality of any nonzero left ideal",
+      "reason": "The zero ideal has cardinality one.",
+      "verified_by": "The zero ideal has cardinality one.",
+      "id": "E048"
+    },
+    {
+      "printed_page": 82,
+      "place": "Proof on the printed page",
+      "original": "such that any left ideal",
+      "corrected": "such that any nonzero left ideal",
+      "reason": "The zero ideal is finite; the argument invokes nonzero ideals.",
+      "verified_by": "The zero ideal is finite; the argument invokes nonzero ideals.",
+      "id": "E049"
+    },
+    {
+      "printed_page": 83,
+      "place": "Proof on the printed page",
+      "original": "exponent $p^(n-1)$",
+      "corrected": "exponent dividing $p^(n-1)$",
+      "reason": "The power identity proves a bound, not the exact exponent.",
+      "verified_by": "The power identity proves a bound, not the exact exponent.",
+      "id": "E050"
+    },
+    {
+      "printed_page": 84,
+      "place": "Proof on the printed page",
+      "original": "is definable in $UT_n lr((CC))$",
+      "corrected": "is definable in $G$",
+      "reason": "The conjugation parameter belongs to the semidirect extension $G$.",
+      "verified_by": "The conjugation parameter belongs to the semidirect extension G.",
+      "id": "E051"
+    },
+    {
+      "printed_page": 85,
+      "place": "Section3 proof",
+      "original": "$l=l/2^(i_0+1)+dots+l/2^(i_m+1)<l$",
+      "corrected": "$l<=l/2^(i_0+1)+dots+l/2^(i_m+1)<l$",
+      "reason": "The union bound is an inequality; overlaps are possible.",
+      "verified_by": "The union bound is an inequality; overlaps are possible.",
+      "id": "E052"
+    },
+    {
+      "printed_page": 88,
+      "place": "Proof on the printed page",
+      "original": "Since $H$ is $aleph_0$-saturated, $H$ has bounded exponent.",
+      "corrected": "Since $H$ is $aleph_0$-categorical, $H$ has bounded exponent.",
+      "reason": "Categoricity, established in the preceding sentence, implies bounded exponent.",
+      "verified_by": "Categoricity, established in the preceding sentence, implies bounded exponent.",
+      "id": "E053"
+    },
+    {
+      "printed_page": 89,
+      "place": "Proof on the printed page",
+      "original": "$abs(M+S\\:Ann_M(s))$",
+      "corrected": "$abs(M\\:Ann_M(s))$",
+      "reason": "The intersection is $Ann_M(s)$. The printed numerator introduces an unwanted factor $n$.",
+      "verified_by": "The intersection equals Ann_M(s); the original numerator is n times too large.",
+      "id": "E054"
+    },
+    {
+      "printed_page": 89,
+      "place": "Proof of Lemma~@lem:finite-bimodule-elementary-equivalence",
+      "original": "Identifying every element $m+s_i$ of $M+S$ with the unique element $overline(m) in M_i$ such that $m_i=m$, we obtain a one-to-one correspondence between $M+S$ and $M_1 union dots union M_n$.",
+      "corrected": "For $i = 1, dots, n$, let\n$D_i = {(m,u_1,dots,u_n): u_i != 0 \"and\" u_j = 0 \"for\" j != i}$,\nand set $D = union_(i=1)^n D_i$. These sets are $0$-definable in $M$.\nOn $D$ define $E(a,b)$ to hold if $a,b in D_i$ for the same $i$\nand $a_0=b_0$. The mapping $[a]_E |-> a_0+s_i$ for $a in D_i$\nis a bijection from $D/E$ to $M+S$. Under this identification, the sets\n$\nunion_((i,j,k) in X) {(a,b,c) in D_i times D_j times D_k:\na_0 + b_0 = c_0}, \\\nunion_((i,j,k) in Y) {(a,b,c) in D_i times D_j times D_k:\na_0 s_j + s_i b_0 = c_0}\n$\nare associated with the graphs of addition and multiplication in\n$M + S$. These sets are $0$-definable in $M$ since $X$ and $Y$ are finite, and they induce the required operations on $D/E$.\nCondition (i), with $S$ nonzero, implies $M != 0$, so every tag\n$D_i$ is nonempty.\n",
+      "reason": "All coordinate axes contain the same zero tuple and thus identify the distinct elements $0+s_i$. Nonempty definable tags and the quotient by $E$ keep these elements distinct. The operation graphs are invariant under $E$.",
+      "verified_by": "All original coordinate axes contain the same zero tuple, which identifies distinct elements0+s_i. Nonempty definable tags and the equivalence relation identifying only equal first coordinates within the same tag give the correct quotient; operation graphs are invariant under this relation.",
+      "id": "E055"
+    },
+    {
+      "printed_page": 91,
+      "place": "Lemma~@lem:bimodule-ring-isomorphism",
+      "original": "Let $S$ and $R$ be finite associative rings with unit, $M$ an $(S,S)$-bimodule and $N$ an $(R,R)$-bimodule. Then $M+S equiv N+R$ implies $S tilde.eq R$.",
+      "corrected": "Suppose that both bimodules satisfy conditions (i) and (ii) of Lemma~@lem:finite-bimodule-elementary-equivalence, with their respective scalar rings. Then $M+S equiv N+R$ implies $S tilde.eq R$.",
+      "reason": "The proof uses the ideal-defining formula established only under (i) and (ii). Without these conditions, take $S=FF_2[epsilon]/(epsilon^2)$, $M=0$, $R=FF_2$, and $N=FF_2$ as regular bimodule: extensions coincide but scalar rings differ.",
+      "verified_by": "The proof uses the ideal-defining formula established only under(i),(ii). Without these conditions, take $S=FF_2[epsilon]/(epsilon^2)$, $M=0$, $R=FF_2$, and $N=FF_2$ as regular bimodule: extensions coincide but scalar rings differ.",
+      "id": "E056"
+    },
+    {
+      "printed_page": 92,
+      "place": "Section3 proof",
+      "original": "Thus, the above arguments show that Example 3.3.1 is not accidental.",
+      "corrected": "Thus, the above arguments show that the\n@ex:equivalence-relation-constant-spectrum[equivalence-relation example]\nfollowing @prop:expanded-spectrum-equality is not accidental.",
+      "reason": "The target is the unnumbered two-class equivalence-relation example following Proposition 3.3.1.",
+      "verified_by": "The target is the unnumbered two-class equivalence-relation example, not Proposition3.3.1.",
+      "id": "E057"
+    },
+    {
+      "printed_page": 94,
+      "place": "Section3 proof",
+      "original": "$(cal(N), overline(b)) equiv cal(M)$",
+      "corrected": "$(cal(N), overline(b)) equiv cal(M)'$",
+      "reason": "The expanded signature requires the expanded structure $cal(M)'$.",
+      "verified_by": "The expanded signature requires the expanded structure M prime.",
+      "id": "E058"
+    },
+    {
+      "printed_page": 96,
+      "place": "Section3 proof",
+      "original": "we denote by $theta^k(v)$ the formula",
+      "corrected": "we denote by $theta^k(x)$ the formula",
+      "reason": "The free variable is $x$; the distinct variable $v$ is bound by the counting quantifier.",
+      "verified_by": "The formula has free variable x; its quantified counting variable v is distinct.",
+      "id": "E059"
+    },
+    {
+      "printed_page": 96,
+      "place": "Section3 proof",
+      "original": "and let $phi(x)$ be strongly minimal. Suppose that",
+      "corrected": "and let $phi(x)$ be strongly minimal and $psi(cal(M))$ infinite.\n  Suppose that",
+      "reason": "Infinitude of $psi(cal(M))$ lets the proof choose a nonalgebraic realization. An empty $psi(cal(M))$ is a counterexample to the printed statement.",
+      "verified_by": "Infinitude of psi is necessary for the proof to choose a nonalgebraic realization; empty psi is a counterexample.",
+      "id": "E060"
+    },
+    {
+      "printed_page": 98,
+      "place": "Proof on the printed page",
+      "original": "finite sequence $B_1, dots, B_m$",
+      "corrected": "finite sequence $B_0, dots, B_m$",
+      "reason": "The proof and hypotheses subsequently use $B_0$.",
+      "verified_by": "The proof and hypotheses subsequently use B_0.",
+      "id": "E061"
+    },
+    {
+      "printed_page": 99,
+      "place": "Proof on the printed page",
+      "original": "$I(T^star,lambda)=I(T,lambda)$",
+      "corrected": "$I(lambda,T^star)=I(lambda,T)$",
+      "reason": "The established convention places cardinality before theory.",
+      "verified_by": "The established convention places cardinality before theory.",
+      "id": "E062"
+    },
+    {
+      "printed_page": 100,
+      "place": "Proof on the printed page",
+      "original": "from 3.5.2 it follows that the additive group",
+      "corrected": "from @prop:stable-small-additive-decomposition it\n  follows that the additive group",
+      "reason": "Proposition 3.2.5 establishes the required decomposition.",
+      "verified_by": "Proposition3.2.5 proves the required decomposition.",
+      "id": "E063"
+    },
+    {
+      "printed_page": 100,
+      "place": "Proof on the printed page",
+      "original": "We can assume that $R$ is an infinite $aleph_0$-saturated ring.",
+      "corrected": "If $R$ is finite, then $UT_n lr((R))$ is finite and contains no\n  infinite strongly minimal definable set. Thus it is not almost strongly\n  minimal. For infinite $R$, we can assume that $R$ is $aleph_0$-saturated.",
+      "reason": "Finite groups cannot be algebraic over an infinite strongly minimal set.",
+      "verified_by": "Finite groups cannot be algebraic over an infinite strongly minimal set.",
+      "id": "E064"
+    },
+    {
+      "printed_page": 101,
+      "place": "Proof on the printed page",
+      "original": "It is clear that for any\n  $alpha in D$ there exists",
+      "corrected": "Choose a nonzero element $alpha$ in one of the isomorphic summands\n  of $D$. There exists",
+      "reason": "Homomorphisms sending this element into distinct summands give distinct images; zero does not.",
+      "verified_by": "Homomorphisms sending this element into distinct summands give distinct images; zero does not.",
+      "id": "E065"
+    },
+    {
+      "printed_page": 101,
+      "place": "Proof on the printed page",
+      "original": "$Z(U) union A$. Let $alpha in D$. We have",
+      "corrected": "$Z(U) union A$. For the chosen $alpha$ we have",
+      "reason": "Retain the nonzero element selected above.",
+      "verified_by": "Retain the nonzero element selected above.",
+      "id": "E066"
+    },
+    {
+      "printed_page": 101,
+      "place": "Section3 proof",
+      "original": "By Proposition 2.4.1, every group that is elementarily equivalent to $UT_n(R)$ is the group $UT_n(S)$ for some $S$ which is not necessarily elementarily equivalent to $R$.",
+      "corrected": "Propositions~@prop:stable-small-additive-decomposition and\n@prop:bounded-divisible-models, every group that is elementarily equivalent to $UT_n lr((R))$ for uncountably categorical $R$ is\n$UT_n lr((S))$ for some $S$. The ring $S$ need not be elementarily equivalent to $R$, as the example in\n@prop:product-ring-counterexample shows outside this categorical case.",
+      "reason": "The additive decomposition into bounded and divisible groups gives pure injectivity; Proposition 2.2.10 then supplies splitting bases. Proposition 2.4.1 supplies a counterexample rather than this general model characterization.",
+      "verified_by": "Bounded plus divisible additive groups are pure injective, and2.2.10 yields splitting bases;2.4.1 is only a counterexample.",
+      "id": "E067"
+    },
+    {
+      "printed_page": 102,
+      "place": "Proof on the printed page",
+      "original": "Let $S_0 ≺ S_1 ≺ dots$ be the Morley tower of this theory.",
+      "corrected": "Let $S_0 ≺ S_1 ≺ dots$ be the Morley tower of $Th(S_0)$.",
+      "reason": "The structures $S_i$ are rings, rather than models of the group theory.",
+      "verified_by": "The S_i are rings rather than models of the group theory.",
+      "id": "E068"
+    },
+    {
+      "printed_page": 104,
+      "place": "Proof on the printed page",
+      "original": "_Necessity._ By 2.2.4",
+      "corrected": "_Sufficiency._ By @cor:expanded-elementary-models",
+      "reason": "This direction proves sufficiency of the criterion.",
+      "verified_by": "This direction proves sufficiency of the criterion.",
+      "id": "E069"
+    },
+    {
+      "printed_page": 104,
+      "place": "Proof on the printed page",
+      "original": "_Sufficiency._ Assume that the type of the standard basis",
+      "corrected": "_Necessity._ Assume that the type of the standard basis",
+      "reason": "This direction derives the necessary criterion.",
+      "verified_by": "This direction derives the necessary criterion.",
+      "id": "E070"
+    },
+    {
+      "printed_page": 106,
+      "place": "Proof on the printed page",
+      "original": "By 3.6.13, any model of $Th(G^star(R))$",
+      "corrected": "By @lem:expanded-central-product-models, any model of $Th(G^*(R))$",
+      "reason": "Lemma 3.6.14 establishes the description of the expanded models.",
+      "verified_by": "Lemma3.6.14 establishes the expanded model description.",
+      "id": "E071"
+    },
+    {
+      "printed_page": 107,
+      "place": "Proof on the printed page",
+      "original": "in general, any finitely generated commutative",
+      "corrected": "in general, any infinite finitely generated commutative",
+      "reason": "Finite rings have decidable complete theories.",
+      "verified_by": "Finite rings have decidable complete theories.",
+      "id": "E072"
+    },
+    {
+      "printed_page": 107,
+      "place": "proof wording",
+      "original": "Since $UT_n lr((R))$ in interpretable",
+      "corrected": "Since $UT_n lr((R))$ is interpretable",
+      "reason": "Printed grammatical misprint.",
+      "verified_by": "Printed grammatical misprint.",
+      "id": "E073"
+    },
+    {
+      "printed_page": 108,
+      "place": "Proof on the printed page",
+      "original": "As is proved in 1.23.8",
+      "corrected": "As is proved in @prop:recursive-theory-isomorphism",
+      "reason": "Proposition 1.23.9 proves recursive isomorphism; Corollary 1.23.8 establishes interpretation.",
+      "verified_by": "Corollary1.23.9 proves recursive isomorphism;1.23.8 proves interpretation.",
+      "id": "E074"
+    },
+    {
+      "printed_page": 111,
+      "place": "Proof on the printed page",
+      "original": "we have $s = tau(i)$.",
+      "corrected": "we have $s = tau(j)$.",
+      "reason": "The equivalence pairs (i,j), and the second index determines the component.",
+      "verified_by": "The equivalence pairs (i,j), and the second index determines the component.",
+      "id": "E075"
+    }
+  ]
+}

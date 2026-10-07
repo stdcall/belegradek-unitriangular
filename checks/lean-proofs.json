@@ -1,0 +1,16 @@
+[
+  {
+    "file": "checks/lean/Belegradek/CentralExtension.lean",
+    "declarations": [
+      "Belegradek.extensionMul_assoc",
+      "Belegradek.extensionMul_unit",
+      "Belegradek.coboundary_cocycle",
+      "Belegradek.coboundary_normalized"
+    ],
+    "book": "Section 1.2, the cocycle law and its coboundary construction",
+    "limitations": "Trivial action, arbitrary additive commutative group and multiplicative group. Checks associativity, the unit and normalized coboundaries; does not classify extensions.",
+    "passages": [
+      "sec:extensions-cocycles"
+    ]
+  }
+]

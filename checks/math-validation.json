@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-07",
+  "edition": "O. V. Belegradek, Model Theory of Unitriangular Groups, AMS Translations (2) 195 (1999), 1–116",
+  "verified_text_sha256": "c76491b79e074b1c8c9700bc1f97c6d8e8c3360ae710151bf2e4786bcdebe477",
+  "digest_scope": "Sorted numbered content/*.typ files, filename followed by NUL and UTF-8 bytes",
+  "lean": {
+    "result": "passed",
+    "declarations": 4,
+    "passages": [
+      "sec:extensions-cocycles"
+    ],
+    "toolchain": "leanprover/lean4:v4.35.0-rc2",
+    "mathlib_commit": "a218e50f981942cba4fd060faff7cae680805062",
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "scope": "Associativity and unit of a central extension with a trivial action; cocycle identity and normalization of coboundaries. A is an additive commutative group and B is any group.",
+    "limitations": "Does not prove the classification of extensions or the quasi-unitriangular representation and model-theoretic classification theorems."
+  },
+  "sage": {
+    "result": "passed",
+    "identities": 16,
+    "version": "10.9",
+    "scope": "Integer polynomial identities for degrees 3 and 4 with g_i(x,y)=lambda_i*x*y: twisted multiplication, associativity, inverse, superdiagonal decomposition, the printed UT4 product, and the UT4(Z) counterexample to the cocycle pullback on p.20.",
+    "limitations": "The polynomial identities specialize to commutative rings for this cocycle family. The computation does not cover noncommutative rings, arbitrary cocycles, or all matrix degrees."
+  },
+  "literature": [
+    {
+      "key": "Weibel1994",
+      "place": "Section6.6, Theorem6.6.7 and Exercise6.6.4",
+      "comparison": "The factor set is defined on the quotient by the central kernel; it need not descend to the first superdiagonal quotient."
+    },
+    {
+      "key": "hodges1993",
+      "place": "Theorem5.3.1",
+      "comparison": "Interpretations by definable quotients preserve the distinct finite scalar tags in the corrected bimodule interpretation."
+    }
+  ],
+  "corrections": 75,
+  "overall_limitations": "The formal and polynomial checks cover only the specified passages. Other corrections are justified individually in corrections.json; the complete article has not been formalized."
+}
