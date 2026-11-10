@@ -21,9 +21,6 @@ test:
 corrections:
     {{python}} scripts/project.py corrections
 
-build-no-notes:
-    {{python}} scripts/project.py build-no-notes
-
 check-prose:
     {{python}} scripts/check_prose.py
 

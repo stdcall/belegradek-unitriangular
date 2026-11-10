@@ -44,12 +44,11 @@ Keys use first author and year, with suffixes for collisions. Language
 and DOI are included when confirmed. Original references use the same
 native semantic labels as other references.
 
-Confirmed changes from the printed wording go into `corrections.json`:
-printed page, place, original reading, corrected reading, reason, and
-specific mathematical or bibliographic verification. Typesetting
-repairs are excluded. Doubtful mathematics remains unchanged until
-resolved. Editorial footnotes use `ed-note` and can be disabled by the
-`editorial-notes=off` input.
+Confirmed changes from the printed wording go into `corrections.json`: printed
+page, place, original reading, corrected reading, reason, and specific
+mathematical or bibliographic verification. Typesetting repairs are excluded.
+Doubtful mathematics remains unchanged until resolved. Editorial footnotes use
+`ed-note`.
 
 Editorial bibliographic records live in `editorial.bib` and use the E1
 numbering sequence. The corrections PDF links its numbered passages to
