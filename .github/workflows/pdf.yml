@@ -66,7 +66,6 @@ jobs:
           path: |
             build/belegradek-unitriangular.pdf
             build/belegradek-unitriangular.corrections.pdf
-            build/belegradek-unitriangular.no-notes.pdf
             build/SHA256SUMS
           if-no-files-found: error
           retention-days: 14

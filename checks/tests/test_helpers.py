@@ -86,6 +86,62 @@ The reference is Theorem~@th:two.
                 self.assertEqual(float(dest[2]), 0)
                 self.assertIsInstance(dest[4], NullObject)
 
+    def test_heading_and_statement_spacing(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = self.prepare(folder)
+            pdf = self.compile(root, '''#import "content/book-style.typ": article-style
+#import "content/statements.typ": *
+#show: article-style
+= Section
+
+Before subsection.
+
+== Subsection
+
+Before proposition.
+
+#proposition[The statement.]
+
+#proof[The argument.]
+
+#theorem[The next statement.]
+''', 'spacing')
+            with pymupdf.open(pdf) as doc:
+                rows = {}
+                for block in doc[0].get_text('dict')['blocks']:
+                    for line in block.get('lines', []):
+                        spans = line['spans']
+                        text = ''.join(span['text'] for span in spans).strip()
+                        rows[text] = spans[0]['origin']
+            for previous, following, minimum in (
+                ('Before subsection.', '1.1. Subsection', 28),
+                ('1.1. Subsection', 'Before proposition.', 19),
+                ('Before proposition.', 'Proposition 1.1.1. The statement.', 20),
+                ('Proposition 1.1.1. The statement.', 'Proof. The argument.', 18),
+                ('Proof. The argument.', 'Theorem 1.1.2. The next statement.', 20),
+            ):
+                with self.subTest(following=following):
+                    self.assertAlmostEqual(rows[following][0], rows[previous][0], places=2)
+                    self.assertGreaterEqual(rows[following][1] - rows[previous][1], minimum)
+
+    def test_proof_opening_stays_with_display(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = self.prepare(folder)
+            pdf = self.compile(root, '''#import "content/book-style.typ": article-style
+#import "content/statements.typ": proof
+#show: article-style
+#set page(height: 90pt, margin: 10pt, footer: none)
+#v(50pt)
+#proof[
+  Opening lead.
+  $ 12345 = 12345. $
+]
+''', 'proof-opening')
+            with pymupdf.open(pdf) as doc:
+                opening = next(page.get_text() for page in doc
+                               if 'Proof. Opening lead.' in page.get_text())
+                self.assertIn('12345', opening)
+
     def test_bibliography_mutation_and_backlinks(self):
         with tempfile.TemporaryDirectory() as folder:
             root = self.prepare(folder)

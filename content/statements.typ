@@ -1,8 +1,14 @@
 #import "numbering.typ": statement-counter, statement-number, statement-selector
 #import "main-defs.typ": bibliography-context
+#let statement-block(body, compact: false) = block(
+  breakable: true,
+  above: if compact { 1.1em } else { 1.4em },
+  below: if compact { 0.9em } else { 1.15em },
+  body,
+)
 #let statement(kind, body, italic: true, title: none, numbered: true) = {
   if not numbered {
-    return block(breakable: true, above: 0.8em, below: 0.6em)[
+    return statement-block[
       #emph[#kind.] #if italic { emph(body) } else { body }
     ]
   }
@@ -12,7 +18,7 @@
     numbering: statement-number,
     caption: none,
     outlined: false,
-    block(breakable: true, above: 0.8em, below: 0.6em)[
+    [
       #context {
         metadata((
           kind: "statement-number",
@@ -93,7 +99,7 @@
   numbering: "1",
   caption: none,
   outlined: false,
-  block(breakable: true, above: 0.6em, below: 0.5em)[
+  [
     #context strong[Fact #counter(figure.where(kind: "auxiliary-fact")).display(
         "1",
       ).]
@@ -106,7 +112,7 @@
   numbering: "1",
   caption: none,
   outlined: false,
-  block(breakable: true, above: 0.6em, below: 0.5em)[
+  [
     #context strong[Lemma #counter(
         figure.where(kind: "auxiliary-lemma"),
       ).display("1").]
@@ -119,18 +125,38 @@
   numbering: "I",
   caption: none,
   outlined: false,
-  block(breakable: true, above: 0.6em, below: 0.5em)[
+  [
     #context strong[Sublemma #counter(figure.where(kind: "sublemma")).display(
         "I",
       ).]
     #emph(body)
   ],
 )
+#let proof-opening(head, body) = {
+  let nodes = if body.func() == [].func() { body.children } else { (body,) }
+  let is-block(it) = (
+    it.func()
+      in (block, figure, table, grid, align, enum, enum.item, list, list.item)
+      or (it.func() == math.equation and it.block)
+  )
+  let boundary = nodes.position(it => it.func() == parbreak or is-block(it))
+  if boundary == none { return [#head #body] }
+  let tail = nodes.slice(
+    boundary + if nodes.at(boundary).func() == parbreak { 1 } else { 0 },
+  )
+  let first = tail.find(it => it.func() != [ ].func())
+  if first == none or not is-block(first) { return [#head #body] }
+
+  let lead = nodes.slice(0, boundary).sum(default: [])
+  block(sticky: true)[#head #lead]
+  tail.sum(default: [])
+}
 #let proof(body, head: [Proof.]) = block(
   breakable: true,
-  above: 0.5em,
-  below: 0.6em,
-)[#emph(head) #body]
+  above: 1.15em,
+  below: 1.25em,
+  proof-opening(emph(head), body),
+)
 #let bib-entry(body, editorial: false) = {
   let kind = if editorial { "editorial-bibliography" } else { "bibliography" }
   let scheme = if editorial { "E1" } else { "1" }

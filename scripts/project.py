@@ -256,7 +256,7 @@ def checksums():
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('command', choices=['build','check','fmt','lint','test',
-                                         'corrections','build-no-notes'])
+                                         'corrections'])
     command = parser.parse_args().command
     if command == 'fmt':
         format_sources()
@@ -274,8 +274,6 @@ def main():
         build()
     if command in {'corrections','check'}:
         build(config()['corrections_entry'], '.corrections')
-    if command in {'build-no-notes','check'}:
-        build(suffix='.no-notes', notes=False)
     if command == 'check':
         run([sys.executable,'scripts/check_lsp.py'])
     checksums()
