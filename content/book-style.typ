@@ -1,5 +1,6 @@
 #import "numbering.typ": statement-selector
 #import "main-defs.typ": bibliography-context
+#import "statements.typ": statement-block
 #let article-style(body) = {
   set page(
     width: 176mm,
@@ -18,11 +19,14 @@
   set heading(numbering: "1.1.")
   set math.equation(numbering: none)
   show math.equation: set text(font: "STIX Two Math")
-  show figure.where(kind: "statement"): set figure(gap: 0pt)
-  show figure.where(kind: "statement"): set block(breakable: true)
-  show figure.where(kind: "sublemma"): set block(breakable: true)
-  show figure.where(kind: "auxiliary-lemma"): set block(breakable: true)
-  show figure.where(kind: "auxiliary-fact"): set block(breakable: true)
+  show statement-selector: it => statement-block(it.body)
+  show figure
+    .where(kind: "sublemma")
+    .or(figure.where(kind: "auxiliary-lemma"))
+    .or(figure.where(kind: "auxiliary-fact")): it => statement-block(
+    it.body,
+    compact: true,
+  )
   show figure: set align(left)
   show heading: it => {
     if it.numbering != none {
@@ -32,7 +36,10 @@
       counter(figure.where(kind: "auxiliary-fact")).update(0)
       counter(figure.where(kind: "sublemma")).update(0)
     }
-    block(above: 1.1em, below: 0.5em, sticky: true)[
+    let (above, below) = if it.level == 1 {
+      (2.25em, 1.15em)
+    } else { (1.8em, 1.05em) }
+    block(above: above, below: below, sticky: true)[
       #strong[
         #if it.numbering != none {
           counter(heading).display(it.numbering)
