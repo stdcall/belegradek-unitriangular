@@ -13,9 +13,12 @@
   set par(
     justify: true,
     leading: 0.56em,
-    spacing: 0.65em,
+    spacing: 0.85em,
     first-line-indent: 1.2em,
   )
+  show selector(list).or(enum): block.with(above: 1.2em, below: 1.2em)
+  show list.where(tight: true): set list(spacing: 0.8em)
+  show enum.where(tight: true): set enum(spacing: 0.8em)
   set heading(numbering: "1.1.")
   set math.equation(numbering: none)
   show math.equation: set text(font: "STIX Two Math")
